@@ -17,10 +17,8 @@ group :development do
   # For spawning a file server in any directory and deploying to Heroku
   gem 'adsf'
 
-  # HAML, Compass, Markdown and Builder for handling all important formats
-  gem 'haml'
+  # Compass, Markdown and Builder for handling all important formats
   gem 'compass'
-  gem 'maruku'
   gem 'builder'
   gem 'kramdown'
 

@@ -4,7 +4,6 @@ require 'compass'
 Compass.add_project_configuration './config/compass.rb'
 
 sass_options = Compass.sass_engine_options
-haml_options = { :format => :html5 }
 
 # A few helpful tips about the Rules file:
 #
@@ -38,11 +37,13 @@ compile '*' do
   case item[:extension]
   when 'md'
     filter :kramdown
-  when 'haml'
-    filter :haml, haml_options
-    layout 'default'
   end
+  
+  filter :erb
+
   # filter :colorize_syntax, colorizers: { javascript: :pygmentize }
+  
+  layout 'default'
 end
 
 route '/images/*/' do
@@ -61,4 +62,4 @@ route '*' do
   item.identifier + 'index.html'
 end
 
-layout '*', :haml, haml_options
+layout '*', :erb

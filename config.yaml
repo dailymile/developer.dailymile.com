@@ -2,7 +2,6 @@
 text_extensions: 
 - css
 - erb
-- haml
 - md
 - htm
 - html
