@@ -2,7 +2,7 @@
 source 'http://rubygems.org'
 
 # Thin to serve content from Heroku
-gem 'thin', group: :production
+gem 'thin'
 gem 'rack'
 gem 'rack-rewrite', :require => 'rack-rewrite'
 gem 'rack-contrib', :require => 'rack/contrib'
