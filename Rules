@@ -35,10 +35,14 @@ compile '/javascripts/*/' do
 end
 
 compile '*' do
-  if item[:extension] == 'haml' 
+  case item[:extension]
+  when 'md'
+    filter :kramdown
+  when 'haml'
     filter :haml, haml_options
     layout 'default'
   end
+  # filter :colorize_syntax, colorizers: { javascript: :pygmentize }
 end
 
 route '/images/*/' do

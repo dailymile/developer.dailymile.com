@@ -2,7 +2,7 @@
 source 'http://rubygems.org'
 
 # Thin to serve content from Heroku
-gem 'thin'
+gem 'thin', group: :production
 gem 'rack'
 gem 'rack-rewrite', :require => 'rack-rewrite'
 gem 'rack-contrib', :require => 'rack/contrib'
@@ -22,6 +22,7 @@ group :development do
   gem 'compass'
   gem 'maruku'
   gem 'builder'
+  gem 'kramdown'
 
   # YUI Compressor to compress JS and CSS
   gem 'yui-compressor'
