@@ -10,7 +10,7 @@ require 'yaml'
 ##
 # Configurable Constants
 #
-BASE_URL = 'http://morning-cloud-8574.herokuapp.com/'
+BASE_URL = 'http://developer-dailymile-com.herokuapp.com/'
 
 ##
 # Heroku-based Deployment
